@@ -10,8 +10,7 @@
   dataStore.subscribe((items: Item[]) => data = items)
 </script>
 
-<div class="w-screen h-[100dvh] flex bg-neutral-100">
+<div class="w-screen h-[100dvh] flex bg-neutral-100 p-5 gap-5">
   <ItemList {data} />
+  <slot />
 </div>
-
-<slot />
