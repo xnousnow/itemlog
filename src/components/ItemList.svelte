@@ -1,6 +1,9 @@
 <script lang="ts">
+  import type { Item } from '../stores'
+
   import Plus from '~icons/lucide/Plus'
-  export let items: string[]
+
+  export let data: Item[]
 </script>
 
 <aside class="m-5 rounded-2xl bg-white w-72 pt-8">
@@ -11,10 +14,10 @@
     </button>
   </div>
   <ul class="flex flex-col px-2 rounded-xl overflow-hidden">
-    {#each items as item}
+    {#each data as item (item.id)}
       <li class="flex">
         <a href="/item/{item.id}" class="pl-4 rounded-lg hover:bg-neutral-100 h-10 grow flex items-center w-full">
-          {item}
+          {item.name}
         </a>
       </li>
     {/each}

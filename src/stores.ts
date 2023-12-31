@@ -1,6 +1,6 @@
 import { type Writable, writable } from 'svelte/store'
 
-interface Item {
+export interface Item {
   name: string
   id: number
   logs: Log[]
