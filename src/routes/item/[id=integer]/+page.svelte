@@ -1,9 +1,12 @@
 <script lang="ts">
-  import type { PageData } from './$types'
+  import type { Item } from '../../../stores'
+  import { data as dataStore } from '../../../stores'
 
-  export let data: PageData
+  import { page } from '$app/stores'
 
-  console.log('Hello, world!')
+  let data: Item[]
+  dataStore.subscribe(e => (data = e))
+  $: item = data.find((i: Item) => i.id == parseInt($page.params.id))
 </script>
 
-The id is {data.id}
+{JSON.stringify(item)}
