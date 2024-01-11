@@ -6,7 +6,7 @@
   export let data: Item[]
 </script>
 
-<aside class="rounded-2xl bg-white w-72 pt-8">
+<aside class="rounded-2xl bg-white w-72 pt-8 shrink-0">
   <div class="flex justify-between pl-5 pr-3">
     <h1 class="text-3xl font-bold mb-2">ItemLog</h1>
     <button class="hover:bg-neutral-100 w-10 h-10 flex justify-center items-center rounded-lg">
