@@ -6,7 +6,7 @@ export interface Item {
   logs: Log[]
 }
 
-interface Log {
+export interface Log {
   year: number
   month: number
   day: number
