@@ -12,7 +12,7 @@
 
   let itemData: Item[]
   dataStore.subscribe(e => (itemData = e))
-  $: selected = itemData.find((i: Item) => i.id == parseInt($page.params.id)) as Item
+  $: selected = itemData.find((i: Item) => i.id == parseInt($page.params.id))
 </script>
 
 <aside class="rounded-2xl bg-white w-72 pt-8 shrink-0">
@@ -27,7 +27,7 @@
       <li class="flex group">
         <a href="/item/{item.id}"
            class="gap-2 rounded-xl hover:bg-neutral-100 active:bg-neutral-200 h-10 grow flex items-center w-full pr-1.5">
-          <div class="ml-1 h-5 w-1.5 bg-neutral-200 rounded-full" class:opacity-0={item.name !== selected.name}></div>
+          <div class="ml-1 h-5 w-1.5 bg-neutral-200 rounded-full" class:opacity-0={item.name !== selected?.name}></div>
           {item.name}
           <div class="grow"></div>
           <div class="hidden group-hover:flex hover:flex">
