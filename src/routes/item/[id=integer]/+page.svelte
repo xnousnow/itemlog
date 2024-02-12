@@ -11,16 +11,12 @@
   $: item = itemData.find((i: Item) => i.id == parseInt($page.params.id))
 </script>
 
-<div class="flex w-full justify-center">
-  <div class="max-w-5xl w-[60rem] mt-4">
-    {#if item}
-      <div class="flex flex-col gap-3">
-        {#each item.logs as log}
-          <Log {log} />
-        {/each}
-      </div>
-    {:else}
-      <p>Item not found</p>
-    {/if}
+{#if item}
+  <div class="flex flex-col gap-3">
+    {#each item.logs as log}
+      <Log {log} />
+    {/each}
   </div>
-</div>
+{:else}
+  <p>Item not found</p>
+{/if}
