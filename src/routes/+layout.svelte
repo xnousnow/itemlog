@@ -12,5 +12,9 @@
 
 <div class="w-screen h-[100dvh] flex bg-neutral-100 p-5 gap-5">
   <ItemList {data} />
-  <slot />
+  <div class="flex w-full justify-center">
+    <div class="max-w-5xl w-[60rem] mt-4">
+      <slot />
+    </div>
+  </div>
 </div>
